@@ -4,7 +4,6 @@
 
 body {
   margin: 0;
-  height: 100vh;
   background-color: #55acee;
   font-family: 'Questrial', sans-serif;
   color: #FFF;
@@ -15,12 +14,18 @@ main {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 70px;
   margin: 80px 0;
+  margin-top: 30px;
+}
+
+h2 {
+  font-size: 50px;
 }
 
 h3 {
-  margin: 50px 0;
+  margin: 60px 0;
+  font-size: 35px;
 }
 
 .quote {
@@ -44,6 +49,11 @@ h3 {
   font-size: 20px;
   margin: 20px auto;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.trigger:hover {
+  background-color: #00aced;
 }
 
 .tweet {
@@ -54,9 +64,10 @@ h3 {
   border-radius: 5px;
   border: 1px solid #FFF;
   padding: 5px 40px;
+  transition: all 0.3s ease-in-out;
 }
 
-i {
-  font-size: 10px;
+.tweet:hover {
+  background-color: #00aced;
 }
 /*# sourceMappingURL=style.css.map */
