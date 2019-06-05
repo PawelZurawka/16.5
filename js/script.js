@@ -11,26 +11,26 @@ function getQuote() {
 }
 
 function createTweet(input) {
-    let data = input[0];
+    const data = input[0];
 
-    let dataElement = document.createElement('div');
+    const dataElement = document.createElement('div');
     dataElement.innerHTML = data.content;
-    let quoteText = dataElement.innerText.trim();
+    const quoteText = dataElement.innerText.trim();
     let quoteAuthor = data.title;
 
     if (!quoteAuthor.length) {
         quoteAuthor = "Unknown author";
     }
 
-    let tweetText = "Quote of the day - " + quoteText + " Author: " + quoteAuthor;
+    const tweetText = `Quote of the day - ${quoteText} Author: ${quoteAuthor}`;
     
     if (tweetText.length > 140) {
         getQuote();
     }
     else {
-        let tweet = tweetLink + encodeURIComponent(tweetText);
-        document.querySelector('.quote').innerText = quoteText;
-        document.querySelector('.author').innerText = "Author: " + quoteAuthor;
+        const tweet = tweetLink + encodeURIComponent(tweetText);
+        document.querySelector('.quote').innerText = `"${quoteText}"`;
+        document.querySelector('.author').innerText = `Author: ${quoteAuthor}`;
         document.querySelector('.tweet').setAttribute('href', tweet);
     }
 }
